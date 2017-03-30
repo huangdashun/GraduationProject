@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/scan_device"
+        android:orderInCategory="100"
+        android:title="扫描周围设备"/>
+
+
+    <item
+        android:id="@+id/change_name"
+        android:orderInCategory="100"
+        android:title="修改用户名"/>
+
+</menu>

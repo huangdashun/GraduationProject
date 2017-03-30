@@ -1,12 +1,8 @@
-package com.example.bong.graduationproject.base;
+package com.it.dashunzi.graduationproject.base;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 /**
  * Created by hs on 2017/3/5.
@@ -23,18 +19,6 @@ public abstract class BaseFragment extends Fragment {
         mContext = getActivity();
     }
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return initView();
-    }
-
-    /**
-     * 强制子类重写,实现子类特有的ui
-     *
-     * @return
-     */
-    protected abstract View initView();
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {

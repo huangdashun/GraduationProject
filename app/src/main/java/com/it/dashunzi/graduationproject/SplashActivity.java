@@ -1,10 +1,9 @@
-package com.example.bong.graduationproject;
+package com.it.dashunzi.graduationproject;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Window;
 
 /**
  * 闪屏页,通常是展示广告或appLogo的页面
@@ -13,7 +12,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
         //使图片全屏
         new Handler().postDelayed(new Runnable() {

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GraduationProject</string>
+
+    <string name="device_no_bluetooth">该设备没有蓝牙设备</string>
 </resources>

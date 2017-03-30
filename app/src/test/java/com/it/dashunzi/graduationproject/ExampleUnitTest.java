@@ -1,4 +1,4 @@
-package com.example.bong.graduationproject;
+package com.it.dashunzi.graduationproject;
 
 import org.junit.Test;
 

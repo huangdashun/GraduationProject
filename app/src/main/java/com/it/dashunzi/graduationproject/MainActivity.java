@@ -1,4 +1,4 @@
-package com.example.bong.graduationproject;
+package com.it.dashunzi.graduationproject;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,9 +6,11 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.RadioGroup;
 
-import com.example.bong.graduationproject.base.BaseFragment;
-import com.example.bong.graduationproject.fragment.AddressBookFragment;
-import com.example.bong.graduationproject.fragment.ChatRoomFragment;
+import com.it.dashunzi.graduationproject.base.BaseFragment;
+import com.it.dashunzi.graduationproject.fragment.AddressBookFragment;
+import com.it.dashunzi.graduationproject.fragment.ChatRecordFragment;
+import com.it.dashunzi.graduationproject.fragment.ChatRoomFragment;
+import com.it.dashunzi.graduationproject.fragment.ChatSettingFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,15 +38,19 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
     }
 
     private void initView() {
+
         setContentView(R.layout.activity_main);
         //初始化radiobutton
         mRgMain = (RadioGroup) findViewById(R.id.rg_main);
     }
 
+
     private void initFragment() {
         mBaseFragment = new ArrayList<>();
         mBaseFragment.add(new ChatRoomFragment());//聊天室
         mBaseFragment.add(new AddressBookFragment());//通讯录
+        mBaseFragment.add(new ChatRecordFragment());//聊天记录
+        mBaseFragment.add(new ChatSettingFragment());//设置页面
     }
 
     private void initListener() {
@@ -61,6 +67,12 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
                 break;
             case R.id.rb_address_book://通讯录
                 position = 1;
+                break;
+            case R.id.rb_record://聊天记录
+                position = 2;
+                break;
+            case R.id.rb_setting://设置页面
+                position = 3;
                 break;
         }
         //根据位置得到对应的Fragment
@@ -102,4 +114,5 @@ public class MainActivity extends FragmentActivity implements RadioGroup.OnCheck
         BaseFragment fragment = mBaseFragment.get(position);
         return fragment;
     }
+
 }
